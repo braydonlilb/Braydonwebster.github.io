@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Braydon's Website</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet"/>   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+ <header>
+  <div class="glow"> 
+  <h1>Braydon is the name, coding is my game</h1>
+  </div>
+ </header>
+
+ <main>
+  <div class="back_image">    
+     
+    <div class="my_info">
+     
+     <img class="mypic" src="propic.JPEG" alt="picture of braydon webster"> 
+
+      <div class="sm_links">
+        <a href="https://www.linkedin.com/in/braydon-webster-561a19230/" target="blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://www.facebook.com/braydon.webster.5" target="blank"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://github.com/braydonlilb" target="blank"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="mailto:braydonwebs@gmail.com"><ion-icon name="mail-outline"></ion-icon></a>   
+      </div>
+
+      <h3 class="quiz-header">Think you know a thing or two about me now? Try your luck with my quiz below! ⬇️⬇️⬇️</h3>
+
+      <div class="mequiz">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="button-grid">
+                <center>
+                <button class="button">Answer 1</button>
+                <button class="button">Answer 2</button>
+                <button class="button">Answer 3</button>
+                <button class="button">Answer 4</button>
+                </center>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="start_button" class="start-button" type="submit">Start quiz</button> 
+            <button id="next_button" class="next-button hide" type="submit">Next</button>
+        </div>
+
+      </div>
+      
+   </div>
+    <div class="big_divs">
+     <div class="accordion">
+       <div class="content-box">
+           <div class="label">Click here to minimize box below</div>
+         <div class="about_me">   
+           <h3>Well hello there! <br><br> My name is Braydon and I was born and raised in the state of Utah. <br><br>
+               Some of my hobbies include soccer, snowboarding, rock climbing, videogames and honestly most things nerd.<br><br>
+               I've had a fun journey getting to this point, but first you may need to understand some context. <br><br>
+               Flashback to the end of the year 2021. I determined that I wanted to become a master of code. 
+               After doing some research, I decided that I wanted to take the self-taught route for software development. 
+               I started by going through some courses with <a href="www.freecodecamp.org">Free Code Camp</a> 
+               And I was loving to learn how to use HTML, CSS and JavaScript. It helped bring out my creative side and I was extatic, because I don't consider myself very creative. 
+               However, I soon found out that going down the self-taugh route is hard. I felt discouraged because I didn't have a direction, just an objective. 
+               So, I took a break for a while. But, It didn't take me long to gain some traction again.
+               I then decided to put my big boy pants on and take some courses at UVU as I am already a student there. 
+               At UVU, I was taught the concepts of Python, which I also learned to enjoy. 
+               What I like to do in some of my freetime is to work on some projects, some of which are listed below. <br><br>
+               Even though I wish I would have decided to follow this path earlier, I have determined that I don't have regrets. 
+               I've enjoyed this journey, and I'll continue to enjoy it! I'm excited to see what my future holds!
+           </h3>
+         </div>
+       </div> 
+     </div>  
+      <div id="projects">
+        <div class="nail_site">
+          <h3>This is a fun project that I've been working on for my sister in law:</h3>
+          <center>
+          <a href="https://codepen.io/braydonlilb/pen/poaYapG?editors=1100"><img class="herbal_pic" src="HNS.png" alt="Picture of Herbal Nail spa" target="blank"></a>
+          </center>
+          <p>Here I utilize mostly HTML and CSS. However, I am currently building a scheduling feature with JavaScript</p>
+        </div>        
+      </div>
+
+      <div id="projects">
+        <div class="trump_api">
+          <h3>This is a funny little project I worked on when I was first learning code</h3>
+          <center>
+          <a href="https://codepen.io/braydonlilb/pen/PoOrZPo"><img class="trump" src="Trump site.jpg" alt="Picture of trump page" target="blank"></a>
+          </center>
+          <p>This is a really simple project that utilizes some HTML, CSS, and API usage with JavaScript</p>
+        </div>
+      </div>
+    </div>
+     
+
+  
+    </div>
+  </main>
+  
+  <footer>
+  <p class="branding">This website was created by Braydon Webster</p>
+  </footer>
+
+  <script>
+
+    // create a const variable for the start button
+    const startButton = document.getElementById('start_button')
+
+    // create a const variable for the next button
+    const nextButton = document.getElementById('next_button')
+
+    // lets create a const variable for the question container
+    const questionContainerElement = document.getElementById('question-container')
+
+    // create a const variable for the question variable
+    const questionElement = document.getElementById('question')
+
+    // create a const variable for the answer button
+    const answerButtonsElement = document.getElementById('answer-buttons')
+
+    // create a const variable to shuffle questions
+    let shuffledQuestions, currentQuestionIndex
+
+    startButton.addEventListener('click', startGame)
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++
+        setNextQuestion()
+    })
+
+    // create a function for the start button
+    function startGame() {
+        startButton.classList.add('hide')
+        shuffledQuestions = questions.sort(() => Math.random() - .5)
+        currentQuestionIndex = 0
+        questionContainerElement.classList.remove('hide')
+        setNextQuestion()
+    }
+
+    // next we will focus on the next button
+    function setNextQuestion() {
+        resetState()
+        showQuestion(shuffledQuestions[currentQuestionIndex])
+    }
+
+    // create a function to show question
+    function showQuestion(question) {
+        questionElement.innerText = question.question
+        question.answers.forEach(answer => {
+            const button = document.createElement('button')
+            button.innerText = answer.text
+            button.classList.add('button')
+            if (answer.correct) {
+                button.dataset.correct = answer.correct
+            }
+            button.addEventListener('click', selectAnswer)
+            answerButtonsElement.appendChild(button)
+        })
+    }
+
+    // create a function that will reset the answers when the next button is clickec
+    function resetState() {
+        nextButton.classList.add('hide')
+        while (answerButtonsElement.firstChild) {
+            answerButtonsElement.removeChild
+            (answerButtonsElement.firstChild)
+        }
+    }
+    // create a function that for what happens when the user selects an answer
+    function selectAnswer(e) {
+        const selectedButton = e.target
+        const correct = selectedButton.dataset.correct
+        setStatusClass(document.body, correct)
+        Array.from(answerButtonsElement.children).forEach(button => {
+            setStatusClass(button, button.dataset.correct)
+        })
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide')
+        } else {
+            startButton.innerText = "Restart"
+            startButton.classList.remove('hide')
+        }
+    }
+
+    // create a function that will apply the status of the button ie. True or False
+    function setStatusClass(element, correct) {
+        clearStatusClass(element)
+        if (correct) {
+            element.classList.add('correct')
+        } else {
+            element.classList.add('wrong')
+        }
+    }
+
+    // create a function to clear the previous status
+    function clearStatusClass(element) {
+        element.classList.remove('correct')
+        element.classList.remove('wrong')
+    }
+
+    // create a const variable for questions
+    const questions = [
+        {
+            question: 'What is my Favorite sport?',
+            answers: [
+                { text: 'Sports are for jerks', correct: false },
+                { text: 'Basketball', correct: false },
+                { text: 'Soccer', correct: true },
+                { text: 'Baseball', correct: false }
+        ]
+        
+        },
+
+        {
+            question: 'What is my Favorite Videogame?',
+            answers: [
+                { text: 'Fifa', correct: false },
+                { text: 'The Legend of Zelda', correct: true },
+                { text: 'Videogames are for nerds', correct: true },
+                { text: 'Farming Simulator', correct: false }
+        ]
+        
+        },
+
+        {
+            question: 'Where was I born?',
+            answers: [
+                { text: 'Idaho', correct: false },
+                { text: 'California', correct: false },
+                { text: 'Canada', correct: false },
+                { text: 'Utah', correct: true }
+        ]
+        
+        },
+
+        {
+            question: 'What is my Favorite color?',
+            answers: [
+                { text: 'Charcoal gray', correct: false },
+                { text: 'Blue', correct: true },
+                { text: 'Red', correct: false },
+                { text: 'Eggshell white', correct: false }
+        ]
+        
+        },
+
+        {
+            question: 'Am I the right guy for the job?',
+            answers: [
+                { text: 'Not a doubt in my mind', correct: false },
+                { text: 'Maybe next time', correct: false },
+                { text: 'Please be ours', correct: false },
+                { text: 'Thats rough buddy', correct: true }
+        ]
+        
+        },
+    ]
+</script>
+  <script>
+        const accordion = document.getElementsByClassName
+        ('content-box');
+
+        for (i = 0; i<accordion.length; i++ ){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
