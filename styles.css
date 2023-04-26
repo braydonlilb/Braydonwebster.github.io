@@ -1,0 +1,291 @@
+ 
+    a {
+          text-decoration: none;
+          color: #0476FF;
+        }
+        
+        a:hover {
+          color: #9D9AF2;
+        }
+
+        .accordion {
+          width: 80%;
+
+        }
+
+        .accordion .content-box .label {
+          cursor: pointer;
+        }
+
+        .accordion .content-box .label::after {
+          content: '+';
+          padding-right: 10px;
+          float: right;
+        }
+        .accordion .content-box.active .label::after {
+
+          content: '-';
+          padding-right: 10px;
+          float: right;
+        }
+        .accordion .content-box .about_me {
+          position: relative;
+          height: 400px;
+          transition: 1.5s;
+          overflow-y: scroll;
+                    
+        }
+
+        .accordion .content-box.active .about_me {      
+          position: relative;
+          height: 0;
+          overflow: hidden;
+          transition: 1.5s;
+       }
+        .about_me {
+          background-color: whitesmoke;
+          border-radius: 20px;
+          width: 100%;
+          height: auto;
+          padding-right: 20px;
+          padding-left: 20px;
+          margin-top: 20px;
+          margin: 20px 0 20px 50px;
+          background-image: url(Triforce.jpg);
+          background-size: 3%;
+          background-repeat: no-repeat;
+          background-position: center;
+          word-spacing: 1px;
+        }
+        
+        .back_image {
+          display: flex;
+        }
+
+        .big_divs {
+          width: 75%;
+          display: flex;
+          flex-direction: column;
+          
+        }
+        body {
+          font-family: 'Kanit', sans-serif;
+          font-family: 'Roboto Condensed', sans-serif;
+          background-image: url(Mountains.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: auto;
+          width: 100%;
+          color: black;
+          font-size: 100%;
+          margin: 0;
+          scroll-behavior: smooth;
+        }
+        
+          .branding {
+          text-align: right;
+          color: black;
+          padding-right: 20px;
+        }
+
+        .sm_links {
+          width: 100%;
+          background-color: whitesmoke;
+          border-radius: 20px;
+          height: fit-content;
+          padding: 10px 0 10px 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        footer {
+          background-color: whitesmoke;
+          height: 50px;
+        }
+
+        .glow { 
+          font-size: xx-large;
+          color: #fff;
+          -webkit-animation: glow 1s ease-in-out infinite alternate;
+          -moz-animation: glow 1s ease-in-out infinite alternate;
+          animation: glow 1s ease-in-out infinite alternate;
+          width: 90%;
+          text-align: center;
+          margin: auto;
+          opacity: .7;
+        }
+    
+        header {
+        height: auto;
+        }    
+        
+        .herbal_pic {
+          width: 40%;
+          height: auto;
+        }
+
+        .herbal_pic:hover {
+          width: 80%;
+          height: auto;
+          transition: 1.5s;
+          cursor: pointer;
+        }
+
+        h2 {
+          font-size: 3em;
+        }
+
+        h3 {
+          font-size: 2em;
+        }
+      
+        ion-icon {
+          color: #0476FF;
+          font-size: 50px;
+          padding-right: 20px;
+        }
+        
+        ion-icon:hover {
+          color: #9D9AF2;
+        }
+        
+        .label {
+          background-color: whitesmoke;
+          color: black;
+          width: 40%;
+          border-radius: 20px;
+          font-size: 1.5em;
+          margin-left: 50px;
+          margin-top: 30px;
+          padding: 5px 5px 5px 20px;
+        }
+
+        .myLife {
+          font-size: 30px
+        }
+        
+        .my_info {
+          width: 20%;
+          min-width: 300px;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .mypic {
+          border-radius: 150px;
+          width: 100%;
+          max-height: 300px;
+          margin-bottom: 20px;
+
+        }
+        
+        #projects {
+        border-radius: 10px;
+        position: inherit;
+        width: 80%;
+        height: auto;
+        background-color: whitesmoke;
+        margin: 0 0 20px 50px;
+        padding: 0 20px 0 20px;
+        }
+
+        .start {
+          width: 100%;
+          height: 500px;
+
+        }
+
+        .trump {
+          width: 40%;
+          height: auto;
+  
+        }
+
+        .trump:hover {
+          width: 80%;
+          height: auto;
+          transition: 1.5s;
+          cursor: pointer;
+        }
+      
+      @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #1645F1, 0 0 20px #1645F1, 0 0 30px #1645F1, 0 0 40px #1645F1, 0 0 50px #1645F1, 0 0 40px #89D8C4, 0 0 70px #e60073;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #09217B, 0 0 40px #09217B, 0 0 50px #09217B, 0 0 40px #09217B, 0 0 40px #09217B, 0 0 60px #1645F1;
+      }
+    }
+
+        *, *::before, *::after {
+          box-sizing: border-box;
+      }
+ 
+        .controls {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .mequiz {  
+              padding: 10px;
+              border-radius: 10px;
+              width: 100%;
+              height: auto;
+              background-color: whitesmoke;
+              box-shadow: 0px 0px 10px gray;
+              margin-top: 10px;
+              
+          } 
+          
+          .button {
+              font-family:Georgia, 'Times New Roman', Times, serif;
+              transition-duration: .3s;
+              padding: 5px;
+              margin: 20px 15px 0 15px;
+              width: 90%;
+              border-radius: 5px;
+              border-color: #859690;
+              font-size: 1.5rem;
+              cursor: pointer ;
+              text-align: center;
+          }
+
+          .button:hover {
+              background-color: #329FA8;
+              color:whitesmoke;
+          }
+
+          .button.correct {
+              background-color: #81EA54;
+          }
+
+          .button.wrong {
+              background-color: #F15D5D;
+          }
+
+          .start-button, .next-button {
+              font-size: 1.5rem;
+              border: none;
+              background-color: #9AD6BC;
+              cursor: pointer;
+              border-radius: 5px;
+              width: 70%;
+              margin: 10px;
+          }
+
+          .hide {
+              display: none;
+          }
+
+
+          .quiz-header {
+            background-color: whitesmoke;
+            border-radius: 20px;
+            text-align: center;
+            height: auto;
+            padding: 5px;
+          }
