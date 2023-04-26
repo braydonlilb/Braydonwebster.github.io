@@ -1,0 +1,303 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Braydon's Website</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet"/>   
+  <style> 
+    
+    a {
+          text-decoration: none;
+          color: #0476FF;
+        }
+        
+        a:hover {
+          color: #9D9AF2;
+        }
+        .accordion {
+                 width: 70%;
+
+                }
+
+                .accordion .content-box .label {
+                    cursor: pointer;
+                }
+
+                .accordion .content-box .label::after {
+
+                    content: '+';
+                    padding-right: 10px;
+                    float: right;
+                }
+                .accordion .content-box.active .label::after {
+
+                    content: '-';
+                    padding-right: 10px;
+                    float: right;
+                }
+                .accordion .content-box .about_me {
+                    position: relative;
+
+                    height: 0;
+                    overflow: hidden;
+    
+                    
+                }
+
+                .accordion .content-box.active .about_me {
+                    position: relative;
+                    height: auto;
+                    transition: 1.5s;
+                    
+                }
+        .about_me {
+          background-color: whitesmoke;
+          border-radius: 20px;
+          width: 100%;
+          height: auto;
+          padding-left: 20px;
+          margin-top: 20px;
+          margin-left: 130px;
+          
+        }
+        
+        .back_image {
+          background-image: url('Mountains.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 100%;
+          height: auto;
+          opacity: .8;  
+      }
+        body {
+          font-family: Macondo;
+          background-color: whitesmoke;
+          height: 100%;
+          width: 100%;
+          color: black;
+          font-size: 100%;
+          margin: 0;
+          scroll-behavior: smooth;
+        }
+        
+          .branding {
+          text-align: right;
+          color: black;
+          padding-right: 20px;
+        }
+
+        .general_info {
+          background-color: whitesmoke;
+          font-size: medium;
+          margin: auto;
+          border-radius: 20px;
+          width: 20%;
+          text-align: center;
+          
+        }
+        .glow { 
+          font-size: 5em;
+          color: #fff;
+          -webkit-animation: glow 1s ease-in-out infinite alternate;
+          -moz-animation: glow 1s ease-in-out infinite alternate;
+          animation: glow 1s ease-in-out infinite alternate;
+          width: 90%;
+          text-align: center
+        }
+    
+        header {
+        height: auto;
+        }    
+        
+        .herbal_pic {
+          width: 40%;
+          height: auto;
+        }
+
+        .herbal_pic:hover {
+          width: 80%;
+          height: auto;
+          transition: 1.5s;
+        }
+
+        h2 {
+          font-size: 3em;
+        }
+
+        h3 {
+          font-size: 2em;
+        }
+      
+        ion-icon {
+          color: #0476FF;
+          font-size: 50px;
+          padding-right: 20px;
+        }
+        
+        ion-icon:hover {
+          color: #9D9AF2;
+        }
+        
+        .label {
+          background-color: whitesmoke;
+          color: black;
+          width: 40%;
+          border-radius: 20px;
+          font-size: 1.5em;
+          margin-left: 50px;
+        }
+        .myLife {
+          font-size: 30px
+        }
+        
+        .my_info {
+          width: 90%;
+          min-width: 300px;
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          
+
+        }
+
+        .mypic {
+          border-radius: 150px;
+          width: 20%;
+          max-height: 300px;
+          margin-bottom: 20px;
+
+        }
+      
+
+        .mequiz {  
+          text-align: center;
+          border: solid white;
+          border-radius: 10px;
+          width: 20%;
+          margin: auto;
+          background-color: whitesmoke;
+        }
+        
+        .projects {
+        font-size: 2em;
+        }
+        
+        #projectContainer {
+        border-radius: 10px;
+        position: inherit;
+        width: 70%;
+        margin-top: 20px;
+        height: auto;
+        background-color: whitesmoke;
+        margin-left: 20px;
+        padding-left: 20px;
+        }
+        
+        .quiz_button {
+          border: solid 2px;
+          padding: 5px;
+        }
+
+        .quiz_button:hover {
+          background-color: #AFE5F0;
+        }
+
+        .start {
+          width: 100%;
+          height: 500px;
+        }
+      @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #1645F1, 0 0 20px #1645F1, 0 0 30px #1645F1, 0 0 40px #1645F1, 0 0 50px #1645F1, 0 0 40px #89D8C4, 0 0 70px #e60073;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #09217B, 0 0 40px #09217B, 0 0 50px #09217B, 0 0 40px #09217B, 0 0 40px #09217B, 0 0 60px #1645F1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+ <header>
+  <div class="glow"> 
+  <h1>Braydon is the name, coding is my game</h1>
+  </div>
+ </header>
+
+ 
+ <div class="back_image"> 
+     
+   
+   <div class="my_info">
+     
+     
+     <img class="mypic" src="propic.JPEG" alt="picture of braydon webster"> 
+     
+
+      <div class="accordion">
+        <div class="content-box">
+            <div class="label">Click here to learn some cool stuff</div>
+            <div class="about_me">   
+            <h3>My name is Braydon and I was born and raised in Utah. 
+                Some of my hobbies include soccer, snowboarding, rock climbing, videogames, anime and most things nerd.
+                I realized that I wanted to become a master of code. So, I started to teach myself how to code back in the beginning of 2022. 
+                The languages that I wanted to focus on were HTML, CSS and JavaScript. 
+                I then decided that I wanted to start taking some courses at Utah Valley University and was able to learn concepts about Python. 
+                Now I currently work on my own projects in my freetime. 
+            </h3>
+            </div>
+        </div> 
+      </div>  
+         <div class="general_info">
+             <p>braydonwebs@gmail.com</p>
+             <a href="https://www.linkedin.com/in/braydon-webster-561a19230/" target="blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+             <a href="https://www.facebook.com/braydon.webster.5" target="blank"><ion-icon name="logo-facebook"></ion-icon></a>
+             <a href="https://github.com/braydonlilb" target="blank"><ion-icon name="logo-github"></ion-icon></a>
+          </div>
+
+            <div id="projectContainer">
+              <center>
+                <h3>This is a fun project that I've been working on for my sister in law:</h3>
+                <p class="projects">Herbal nail spa website: <a href="https://codepen.io/braydonlilb/pen/QWOjQoJ">https://bit.ly/3o8NqTL</a></p>
+                <img class="herbal_pic" src="HNS.png">
+              </center> 
+            </div>
+    </div>
+
+        
+        
+  <main>
+  
+  <div class="mequiz">
+    <h3>It's quiz time!</h3>
+    
+  
+    <button href="me_quiz.py" class="quiz_button" type="submit">Start quiz</button> 
+    
+    <p class="myLife"></p>
+  </div>
+    </div>
+  </main>
+  <footer>
+  <p class="branding">This website was created by Braydon Webster</p>
+  </footer>
+  <script>
+        const accordion = document.getElementsByClassName
+        ('content-box');
+
+        for (i = 0; i<accordion.length; i++ ){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
